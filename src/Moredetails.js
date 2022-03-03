@@ -7,12 +7,13 @@ import CardContent from '@mui/material/CardContent';
 import { useState, useEffect } from "react";
 import { api } from "./bike";
 
+
+// display more details about bike
 export function DisplayDetails() {
 
     const { id } = useParams();
 
     const history = useHistory()
-
 
     const [bike, setbike] = useState({});
 

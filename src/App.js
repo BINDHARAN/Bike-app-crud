@@ -25,9 +25,8 @@ import TwoWheelerIcon from '@mui/icons-material/TwoWheeler';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 
 
+// app component
 export default function App() {
-
-
   const history = useHistory();
 
   const [mode, setMode] = useState("dark")
@@ -97,14 +96,13 @@ export default function App() {
     </Box>
   );
   return (
+
+    // MUI theme
     <ThemeProvider theme={theme}>
       <Paper elevation={4} style={{ borderRadius: "0px", minHeight: "100vh" }} >
         <div className="App">
-
           <AppBar position="static">
             <Toolbar>
-
-
               {["left"].map((anchor) => (
                 <Fragment key={anchor}>
                   <Button color="inherit" onClick={toggleDrawer(anchor, true)}>
@@ -122,6 +120,8 @@ export default function App() {
                   </Drawer>
                 </Fragment>
               ))}
+
+              {/* light and dark mode logic */}
               <Button color="inherit"
                 style={{ marginLeft: "auto" }}
                 startIcon={mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
@@ -131,6 +131,7 @@ export default function App() {
             </Toolbar>
           </AppBar>
 
+          {/* routing setup */}
           <Switch>
             <Route path="/Bikes/add">
               <div className="page ">
@@ -156,10 +157,7 @@ export default function App() {
               </div>
             </Route>
 
-
-
             <Route exact path="/">
-
               <div className="page ">
                 < Msg />
               </div>

@@ -13,11 +13,13 @@
   margin: 0;
   padding: 0;
 }
+/* 404 img */
 .error-img {
   width: 100%;
   height: auto;
 }
 
+/* card img */
 .img {
   width: 400px;
   height: auto;
@@ -27,6 +29,7 @@
 .img:hover {
   transform: translateY(1px);
 }
+/* card container */
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -39,6 +42,7 @@
   font-size: 20px;
   height: min-content;
 }
+
 
 .cardtitle {
   font-family: 'Chicle', cursive;
@@ -56,6 +60,7 @@
   font-family: var(--font-serif);
 }
 
+/* mui drawer */
 .drawer-icon {
   font-family: 'Carter One', cursive;
   display: flex;
@@ -84,9 +89,13 @@
   align-items: center;
   justify-content: center;
 }
+
+
 .page {
   margin-top: 40px;
 }
+
+/*edit and add page forms */
 
 .Bike_form {
   display: flex;
@@ -107,12 +116,16 @@
   border-radius: 20px;
 }
 
+/* home page */
+
 .home {
   margin-top: 190px;
   font-size: xx-large;
   font-family: var(--font-serif);
   text-align: center;
 }
+
+/* more details page */
 .moredetials-card {
   width: 50%;
   margin: 10px auto;

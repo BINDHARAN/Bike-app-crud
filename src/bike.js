@@ -9,13 +9,13 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 
-
+// mock api
 export const api = "https://6209ed8f92946600171c55c2.mockapi.io/bikes"
 
 export function BikeList() {
     const history = useHistory()
     const [bike, setbike] = useState([]);
-
+    // READ
     const getbike = () => {
 
         fetch(`${api}`, {
@@ -27,7 +27,7 @@ export function BikeList() {
     }
 
     useEffect(() => getbike(), []);
-
+    // DELETE
     const deletebike = (id) => {
         fetch(`${api}/${id}`, {
             method: "DELETE"
@@ -79,6 +79,8 @@ export function BikeList() {
         </div>
     );
 }
+
+// <--- Bike page(cards) --->
 function Bike({ post, name, rate, launch, deleteButton, editButton, id }) {
 
     const history = useHistory()
@@ -114,6 +116,7 @@ function Bike({ post, name, rate, launch, deleteButton, editButton, id }) {
     );
 }
 
+// like and dislike and edit and delete btns
 function Counter({ deleteBtn, editButton }) {
     const [like, setLike] = useState(0);
     const [unlike, setunLike] = useState(0);
